@@ -8,3 +8,24 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.text1
+{
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  justify-content: center;
+  text-align: center;
+  font-size: 36px;
+  filter: drop-shadow(3px 4px 3px  #484848);
+  line-height: 1.8em;/*原始 1.6em*/
+  margin-top: 10px;/*原始 15px */
+  color: white;
+}
+
+
+.content{
+	border: 2px solid #d1d1d1;
+	padding: 1px 7px 10px 7px;
+	overflow: auto;
+}

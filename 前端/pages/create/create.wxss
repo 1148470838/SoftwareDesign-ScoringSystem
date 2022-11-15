@@ -1,0 +1,76 @@
+/* pages/create/create.wxss */
+
+/*flex布局容器*/
+.container-create {
+  background: #c9e9fe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100vh;
+}
+
+/*flex项目*/
+.flex-block {
+  display: block;
+  box-sizing: border-box;
+  
+  position: relative;
+  margin-top: 30rpx;
+}
+
+
+/*卡片*/
+.card {
+  background-color: #95c2e1;
+  border-radius: 24rpx;
+  border: 5rpx solid #ffffff;
+  box-shadow: 0rpx 7rpx 10rpx 2rpx #888888;
+  
+  width: 650rpx;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+/*卡片标题*/
+.text-title {
+  color: #FFFFFF;
+  font-size: 40rpx;
+}
+
+/*输入框*/
+.textbox {
+  background: #c6e7fd;
+  border-radius: 15rpx;
+  border: 5rpx solid #919191;
+  width: 550rpx;
+
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+
+  font-size: 36rpx;
+  text-align: center;
+}
+
+.areas {
+  height: 100rpx;
+}
+
+
+/*提交按钮*/
+.SubmitButton {
+  background-color: #6d9ebf;
+  border-radius: 24rpx;
+  border: 5rpx solid #ffffff;
+  box-shadow: 0rpx 7rpx 10rpx 2rpx #888888;
+
+  color: white;
+  font-size: 40rpx;
+}

@@ -36,6 +36,29 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    domain: "https://pf.rebus.work" //全局的服务器请求地址，必须包含协议头（http://或https://），根据实际情况可加上端口号（:8080）
+    //domain: "http://127.0.0.1:8080/test" //测试地址
+  },
+
+  Check()
+  {
+    setTimeout(function()
+    {
+      if(wx.getStorageSync('JSESSIONID') != "") return true;
+      else
+      {
+        wx.showToast({
+          title: '缺少关键cookie，请重新登录', //弹框内容
+          icon: 'none',  //弹框模式
+          duration: 2000    //弹框显示时间
+        });
+        setTimeout(function () {
+          wx.reLaunch({
+            url: '/pages/index/index',
+          })
+        }, 1000);
+      }
+    },1000);
   }
 })

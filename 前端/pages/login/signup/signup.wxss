@@ -1,0 +1,78 @@
+/* pages/login/signup/signup.wxss */
+.container {
+  background-color:#ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container2 {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 16%;
+  position: relative;
+}
+
+
+.textbox{
+  width: 600rpx;
+  height: 120rpx;
+  position: relative;
+}
+
+.icon{
+  left: 32rpx;
+  top: 32rpx;
+  position: relative;
+}
+
+.text-input{
+  width: 70%;
+  height: 80rpx;
+  margin-left: 120rpx;
+  bottom: 32rpx;
+  position: relative;
+}
+
+
+.btn-login{
+  background-color: rgb(51, 204, 170);
+  width: 600rpx;
+  border-radius: 50rpx;
+  margin-top: 64rpx;
+  position: relative;
+}
+.btn-login text{
+  color:white;
+  font-size: 39rpx;
+}
+
+
+.container3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-s{
+  background-color: transparent;
+  top: 10vh;
+  position: relative;
+}
+.btn-s::after{
+  border: none;
+}
+.btn-s text{
+  color: #576b95;
+  font-size: 28rpx;
+}

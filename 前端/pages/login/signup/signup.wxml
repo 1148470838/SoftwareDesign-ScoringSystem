@@ -1,0 +1,20 @@
+<!--pages/login/signup/signup.wxml-->
+<view class="container">
+  <view class="container2">
+    <image class="logo" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGNsYXNzPSJsb2dvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjU2IDI1NiIgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiPg0KPHJlY3QgY2xhc3M9InN0MCIgc3R5bGU9ImZpbGw6IzY2RkZDQzsiIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ii8+DQo8cGF0aCBjbGFzcz0ic3QxIiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTU2LjQsOTdoOS41djM5LjRIODV2Ny45SDU2LjRWOTd6Ii8+DQo8cGF0aCBjbGFzcz0ic3QxIiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTg5LjMsMTI2LjVjMC0xMiw4LjMtMTguOSwxNy4yLTE4LjljOSwwLDE3LjIsNi45LDE3LjIsMTguOWMwLDExLjgtOC4zLDE4LjgtMTcuMiwxOC44DQoJQzk3LjYsMTQ1LjMsODkuMywxMzguNCw4OS4zLDEyNi41eiBNMTE0LjIsMTI2LjVjMC02LjgtMi44LTExLjItNy42LTExLjJjLTQuOSwwLTcuNiw0LjQtNy42LDExLjJjMCw2LjcsMi44LDExLjEsNy42LDExLjENCglDMTExLjQsMTM3LjYsMTE0LjIsMTMzLjIsMTE0LjIsMTI2LjV6Ii8+DQo8cGF0aCBjbGFzcz0ic3QxIiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTEyOS4zLDE1MC43YzAtMywxLjktNS42LDUuMS03LjRWMTQzYy0xLjktMS4yLTMuMy0zLjEtMy4zLTZjMC0yLjcsMS45LTUuMiw0LTYuN1YxMzANCgljLTIuNC0xLjgtNC43LTUuMi00LjctOS4zYzAtOC40LDYuOC0xMywxNC41LTEzYzIsMCwzLjksMC40LDUuNCwwLjloMTIuOXY2LjlIMTU3YzEsMS4yLDEuNywzLjIsMS43LDUuNGMwLDguMS02LjEsMTIuMi0xMy44LDEyLjINCgljLTEuNCwwLTMuMS0wLjMtNC42LTAuOGMtMSwwLjgtMS41LDEuNy0xLjUsMy4xYzAsMS45LDEuNCwyLjksNS42LDIuOWg2LjFjOC42LDAsMTMuMywyLjcsMTMuMyw5YzAsNy4yLTcuNSwxMi43LTE5LjUsMTIuNw0KCUMxMzUuOCwxNTkuOSwxMjkuMywxNTcsMTI5LjMsMTUwLjd6IE0xNTQuNywxNDguOGMwLTIuNi0yLjEtMy4yLTYtMy4yaC00LjRjLTIuMiwwLTMuNy0wLjItNS0wLjVjLTEuNiwxLjMtMi40LDIuNy0yLjQsNC4yDQoJYzAsMywzLjMsNC43LDguNiw0LjdDMTUxLDE1NCwxNTQuNywxNTEuNiwxNTQuNywxNDguOHogTTE1MC40LDEyMC42YzAtNC4yLTIuNC02LjYtNS42LTYuNmMtMy4yLDAtNS42LDIuNC01LjYsNi42czIuNSw2LjYsNS42LDYuNg0KCVMxNTAuNCwxMjQuOSwxNTAuNCwxMjAuNnoiLz4NCjxwYXRoIGNsYXNzPSJzdDEiIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTY2LjQsMTI2LjVjMC0xMiw4LjMtMTguOSwxNy4yLTE4LjljOSwwLDE3LjIsNi45LDE3LjIsMTguOWMwLDExLjgtOC4zLDE4LjgtMTcuMiwxOC44DQoJQzE3NC42LDE0NS4zLDE2Ni40LDEzOC40LDE2Ni40LDEyNi41eiBNMTkxLjIsMTI2LjVjMC02LjgtMi44LTExLjItNy42LTExLjJjLTQuOSwwLTcuNiw0LjQtNy42LDExLjJjMCw2LjcsMi44LDExLjEsNy42LDExLjENCglDMTg4LjUsMTM3LjYsMTkxLjIsMTMzLjIsMTkxLjIsMTI2LjV6Ii8+DQo8L3N2Zz4="></image>
+    <text style="font-weight: bold; font-size: 40rpx;">点评熊</text>
+  </view>
+  <form bindsubmit="create_signup">
+    <view style="background-color: #eeeeee; border-radius: 32rpx;">
+      <view class="textbox">
+        <mp-icon icon="me" color="black" size="{{25}}" class="icon"></mp-icon>
+        <input class="text-input" type="text" name="username" placeholder="设置您的用户名" value="{{username}}"></input>
+      </view>
+      <view class="textbox">
+        <mp-icon icon="lock" color="black" size="{{25}}" class="icon"></mp-icon>
+        <input class="text-input" type="password" name="password" placeholder="设置您的密码" value="{{password}}"></input>
+      </view>
+    </view>
+    <button bindtap="goto_index" class="btn-login" form-type="submit"><text>注册</text></button>
+  </form>
+</view>

@@ -1,0 +1,174 @@
+/* pages/score/score.wxss */
+
+page {
+  position: relative;
+  background: #c9e9fe;
+}
+
+
+.top-card {
+  background: #4354a6;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0rpx 10rpx 14rpx 2rpx #4b4b4b;
+
+  display: block;
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 150rpx;
+  
+  position: fixed;
+  top: 0rpx; /*元素相对于顶部为0rpx*/
+  
+  z-index: 7;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topBlock {
+  background: #5b6faa;
+  border-radius: 15px;
+  box-shadow: 0rpx 8rpx 12rpx 2rpx #4b4b4b;
+
+  display: block;
+  box-sizing: border-box;
+  width: 688rpx;
+  height: 90rpx;
+  
+  position: relative;
+  top: 30rpx;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContestName {
+  display: block;
+  box-sizing: border-box;
+
+  color: white;
+  font-size: 36rpx;
+}
+
+
+.bottom-card {
+  background: #4354a6;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 8rpx 0rpx 8rpx 8rpx #4b4b4b;
+
+  display: block;
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 120rpx;
+
+  position: fixed; /*元素的位置相对于浏览器窗口是固定位置*/
+  bottom: 0rpx; /*元素相对于底部为0rpx*/
+  
+  z-index: 7;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SubmitButton {
+  background-color: #6d9ebf;
+  border-radius: 24rpx;
+  border: 5rpx solid #ffffff;
+
+  color: white;
+  font-size: 38rpx;
+
+  position: relative;
+  top: 15rpx;
+}
+
+
+.list {
+  box-sizing: border-box;
+  margin-top: 150rpx;
+  margin-bottom: 160rpx;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-card {
+  background: #7faccb;
+  border-radius: 15px;
+  box-shadow: 0rpx 8rpx 12rpx 2rpx #4b4b4b;
+
+  display: block;
+  box-sizing: border-box;
+  width: 650rpx;
+  height: 200rpx;
+
+  position: relative;
+  margin-top: 40rpx;
+  
+  overflow: hidden; /*溢出隐藏*/
+}
+
+.userid {
+  background: #dfeffa;
+  border-radius: 5px;
+
+  display: block;
+  box-sizing: border-box;
+  width: 80rpx;
+  height: 50rpx;
+
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+
+  color: #6d9ebf;
+  font-size: 38rpx;
+  line-height: 50rpx; /*行高*/
+  text-align: center;
+  white-space: nowrap; /*段落中的文本不换行*/
+  overflow: hidden; /*溢出隐藏*/
+}
+
+.nickname {
+  display: block;
+  box-sizing: border-box;
+  width: 460rpx;
+  height: 50rpx;
+
+  position: absolute;
+  top: 30rpx;
+  left: 150rpx;
+
+  color: #FFFFFF;
+  font-size: 38rpx;
+  line-height: 50rpx; /*行高*/
+  text-align: left;
+  white-space: nowrap; /*段落中的文本不换行*/
+  overflow: hidden; /*溢出隐藏*/
+}
+
+.score {
+  background: #dfeffa;
+  border-radius: 10px;
+  
+  display: block;
+  box-sizing: border-box;
+  width: 320rpx;
+  height: 80rpx;
+
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+
+  font-size: 42rpx;
+  text-align: center;
+}

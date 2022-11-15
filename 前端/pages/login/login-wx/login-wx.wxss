@@ -1,0 +1,34 @@
+/* pages/login/login-wx/login-wx.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+
+.usermotto {
+  margin-top: 200rpx;
+}
+
+
+.btn-login-wx{
+  background-color: #07c160;
+  width: 700rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+.btn-login-wx text{
+  color:white;
+}

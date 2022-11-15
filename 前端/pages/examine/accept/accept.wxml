@@ -1,0 +1,7 @@
+<!--pages/examine/accept/accept.wxml-->
+<import src="tpl/accept-tpl.wxml"/>
+<block wx:for="{{list}}" wx:for-item="item" wx:for-index="idx"> 
+    <template is="acceptItemTpl" data="{{...item}}"></template>
+</block>
+<text class = "text1" wx:if = "{{none == true}}">暂无数据</text>  
+

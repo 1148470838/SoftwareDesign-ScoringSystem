@@ -1,0 +1,21 @@
+<!--pages/score/score.wxml-->
+<form bindsubmit="SubmitScore">
+  <view class="top-card">
+    <view class="topBlock">
+      <view class="ContestName">比赛名称：</view>
+      <view class="ContestName">{{ContestName}}</view>
+      <input class="ContestId" name="ContestName" value="contest{{ContestId}}" hidden="hidden"></input>
+    </view>
+  </view>
+
+  <view class="list">
+    <view class="user-card" wx:for="{{userList}}" wx:key="{{userid}}">
+      <view class="userid">{{item.userid}}</view><view class="nickname">{{item.nickname}}</view>
+      <input class="score" type="number" name="{{item.userid}}" value="" placeholder="请输入分数 0~100" placeholder-style="font-size: 35rpx; text-align: center;"></input>
+    </view>
+  </view>
+
+  <view class="bottom-card">
+    <button class="SubmitButton" form-type="submit">确认提交</button>
+  </view>
+</form>

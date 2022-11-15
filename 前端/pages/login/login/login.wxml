@@ -1,0 +1,24 @@
+<!--pages/login/login/login.wxml-->
+<view class="container">
+  <view class="container2">
+    <image class="logo" src="logo.png"></image>
+    <text style="font-weight: bold; font-size: 40rpx;">评分熊</text>
+  </view>
+  <form bindsubmit="create_login">
+    <view style="background-color: #eeeeee; border-radius: 32rpx;">
+      <view class="textbox">
+        <mp-icon icon="me" color="black" size="{{25}}" class="icon"></mp-icon>
+        <input class="text-input" type="text" name="username" placeholder="输入您的用户名" value=""></input>
+      </view>
+      <view class="textbox">
+        <mp-icon icon="lock" color="black" size="{{25}}" class="icon"></mp-icon>
+        <input class="text-input" type="password" name="password" placeholder="输入您的密码" value=""></input>
+      </view>
+    </view>
+    <button class="btn-login" form-type="submit"><text>登录</text></button>
+  </form>
+  <view class="container3">
+    <button class="btn-s" bindtap="goto_signup"><text>注册</text></button>
+    <button class="btn-s" bindtap="goto_forgot"><text>忘记密码</text></button>
+  </view>
+</view>

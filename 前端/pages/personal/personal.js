@@ -1,25 +1,92 @@
 // pages/personal/personal.js
-Page({
+const app = getApp();
+const domain = app.globalData.domain;
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-    list: [{
-      id: 0,
-      name: "",
-      description: "",
-    }],
+    list: [],
+    none: false,
+    judge: false,
+  },
+
+  Enter:function(event)
+  {
+    var id = event.currentTarget.dataset.id;
+    var name = event.currentTarget.dataset.name;
+    wx.redirectTo({
+      url: "/pages/score/score?id=" + id + "&&name=" + name
+    })
+  },
+  
+
+  Lock:function(event)
+  {
+    var id = event.currentTarget.dataset.id;
+    var lock = event.currentTarget.dataset.lock;
+    var that = this;
+    wx.request({
+      url: domain + "/LockJudges",
+      data:{
+        "ContestName":"contest" + id,
+        "Lock":lock,
+        "Cookie": wx.getStorageSync('JSESSIONID'),
+      },
+      method: 'POST',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+          switch (res.data){
+            case 1:
+              wx.showToast({
+                title: '评委锁定',
+                icon: 'success',
+                duration: 2000,
+              });             
+              break;
+            case 2:
+              wx.showToast({
+                title: '锁定失败',
+                icon: 'none',
+                duration: 2000,
+              });
+              break;
+            case 3:
+              wx.showToast({
+                title: '参赛者锁定',
+                icon: 'success',
+                duration: 2000,
+              });
+              break;
+            case 4:
+              wx.showToast({
+                title: '锁定失败',
+                icon: 'none',
+                duration: 2000,
+              });
+              break;
+            default:
+              break;
+          }
+      },
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.Check();
     var that = this;
     wx.request({
-      url: 'http://192.168.0.105:8080/test/ShowPersonal',
-      header: { 'content-type': 'application/json' },
+      url: domain + '/ShowPersonal',
+      header: {
+        'content-type': 'application/json' ,
+        "Cookie": wx.getStorageSync('JSESSIONID')
+      },
       data: null,
       success: function (res) {
         var jsonRes = res.data.split(";");
@@ -27,11 +94,34 @@ Page({
         for (var i = 0; i <= jsonRes.length - 2; i++) {
           arrayRes.push(JSON.parse(jsonRes[i]));
         }
-        that.setData({
-          list: arrayRes
-        });
+        if(jsonRes[jsonRes.length-1].trim() === "isJudge")
+        {
+          that.setData({
+            judge: true
+          });
+        }
+        if(res.data != ""){
+          that.setData({
+            list: arrayRes
+          });
+        }
+        else
+        {
+          that.setData(
+            {
+              list: [],
+              none:true,
+            }
+          );         
+        }
       },
       fail: function (res) {
+        that.setData(
+          {
+            list: [],
+            none:true,
+          }
+        );    
       }
     });
   },

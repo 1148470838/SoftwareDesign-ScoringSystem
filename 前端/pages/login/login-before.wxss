@@ -1,0 +1,33 @@
+/* pages/login/login-before.wxss */
+.container {
+  background-color:#ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.btn-login-wx{
+  background-color: #07c160;
+  width: 700rpx;
+  border-radius: 10rpx;
+  margin-top: 500rpx;
+  position: relative;
+}
+.btn-login-wx text{
+  color:white;
+}
+
+
+.btn-login{
+  background-color: transparent;
+  margin-top: 10rpx;
+  position: relative;
+}
+
+.btn-login text{
+  color: #576b95;
+  font-size: 28rpx;
+}

@@ -1,0 +1,12 @@
+<!--pages/show/tpl/show-tpl.wxml-->
+<template name="showItemTpl"> <!--将template的内容整合成一个模块-->
+  <view class="content">  
+    <text>ID：{{id}}\n</text>
+    <text>名称：{{name}}\n</text>
+    <text>描述：{{description}}\n</text>
+    <text>竞赛时间：{{starttime}} ~ {{endtime}}\n</text>
+    <text>当前参赛人数：{{currentmembers}}\n</text>
+    <text>最大参赛人数：{{maxmembers}}\n</text>
+    <button bindtap = "Join" data-id="{{id}}">加入</button>
+  </view>
+</template>

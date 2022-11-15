@@ -1,0 +1,14 @@
+<!--pages/show/show.wxml-->
+<import src="tpl/show-tpl.wxml"/> <!--使用import引用模块postItemTpl的文件绝对路径-->
+
+<block wx:for="{{list}}" wx:for-item="item" wx:for-index="idx">  <!--利用wx:for循环输出js中的数据-->
+  <!--tap事件能注册在view上，但不能注册在block、template上-->
+    <template is="showItemTpl" data="{{...item}}"></template>
+    <!--使用拓展运算符"..."展开传入对象变量，则TPL中无需再写有item的地方可以去掉item"-->
+
+    <!--<include src="post-item/post-item-tpl.wxml"/>-->
+    <!--使用include的方式引用模块，不能传入data，且wxml中的template要去掉，item要加回去-->
+
+    <!--include适合静态wxml，import适合有数据绑定的wxml-->
+</block>  
+<text class = "text1" wx:if = "{{none == true}}">暂无比赛</text>  
